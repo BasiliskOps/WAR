@@ -56,4 +56,27 @@ function gameStart() {
         )
 // ^^ this function begins the game logic and uses a for loop to state conditions for player 1 to win  
 
- 
+    } else if (p1Deck[i].Value < p2Deck[j].Value) {
+        console.log(
+        "Player 1: " +
+        p1Deck[i].Value +
+        p1Deck[i].Suit +
+        " " +
+        "Player 2: " +
+        p2Deck[j].Value +
+        p2Deck[j].Suit
+    )
+        console.log("Player 2 Wins!")
+        p2Deck.push(p1Deck[i])
+        p2Deck.push(p2Deck[j])
+        p1Deck.pop()
+        console.log(
+       "Player 1 has: " +
+        p1Deck.length +
+        "cards" +
+        "  " +
+        "Player 2 has: " +
+        p2Deck.length +
+        "cards"
+    )
+// ^^ wrote else if function to declare conditions for player 2 victory 
