@@ -79,4 +79,42 @@ function gameStart() {
         p2Deck.length +
         "cards"
     )
-// ^^ wrote else if function to declare conditions for player 2 victory 
+// ^^ wrote else if to declare conditions for player 2 victory 
+
+    } else if (p1Deck[i].Value === p2Deck[j].Value) {
+        console.log("****WAR****")
+        console.log(
+        "Player 1: " +
+        p1Deck[i].Value +
+        p1Deck[i].Suit +
+        " " +
+        "Player 2: " +
+        p2Deck[j].Value +
+        p2Deck[j].Suit
+    )
+    if (p1Deck[i + 1].Value > p2Deck[j + 1].Value) {
+        p1Deck.push(p1Deck[i])
+        p1Deck.push(p1Deck[i + 1])
+        p1Deck.push(p1Deck[i + 2])
+        p1Deck.push(p2Deck[i + 3])
+        p1Deck.push(p2Deck[j]);
+        p1Deck.push(p2Deck[j + 1])
+        p1Deck.push(p2Deck[j + 2])
+        p1Deck.push(p2Deck[j + 3])
+
+    } else {
+        p2Deck.push(p1Deck[i]);
+        p2Deck.push(p1Deck[i + 1])
+        p2Deck.push(p1Deck[i + 2])
+        p2Deck.push(p1Deck[i + 3])
+        p2Deck.push(p2Deck[j])
+        p2Deck.push(p2Deck[j + 1])
+        p2Deck.push(p2Deck[j + 2])
+        p2Deck.push(p2Deck[j + 3])
+    }
+}
+}
+}
+gameStart()
+
+// ^^ lastly, else if used to implement war functionality when player 1 and player 2 draw the same card 
