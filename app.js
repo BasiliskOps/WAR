@@ -14,3 +14,18 @@ function freshDeck() {
     // ^^ this function cycles through the suits of the deck w/for loop and creates cards in nested for loop
 }
 console.log(deck)
+
+let newDeck = deck
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5)
+}
+shuffle(newDeck)
+console.log(newDeck)
+let devideDeck = newDeck
+let  p1Deck = devideDeck.slice(0, 26)
+console.log(p1Deck)
+let p2Deck = devideDeck.slice(26, 52)
+console.log(p2Deck)
+// ^^ this function then shuffles and divides the deck into two halves
+
