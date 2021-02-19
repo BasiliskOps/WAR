@@ -165,7 +165,7 @@ while (game) {
     }
 }
 
-// ^^ this while statement uses boolean logic to declare a winner once one player has zero cards
+// ^^ this while statement uses boolean logic to declare a winner once a player has zero cards
 
 
 
